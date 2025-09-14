@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edukasi Tanda Bahaya Masa Nifas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .section {
+            display: none;
+        }
+        .section.active {
+            display: block;
+        }
+        /* Custom scrollbar for better UX on desktop */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-pink-500 h-8 w-8"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="M12 12c-3 0-5 2.5-5 5"></path><path d="M12 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"></path><path d="m17 14-1-1-1 1"></path></svg>
+                    <span class="ml-2 text-xl font-bold text-gray-700">Nifas Sehat</span>
+                </div>
+                <nav class="hidden md:flex space-x-4">
+                    <a href="#home" class="nav-link text-gray-600 hover:text-pink-500 font-medium px-3 py-2 rounded-md">Beranda</a>
+                    <a href="#edukasi" class="nav-link text-gray-600 hover:text-pink-500 font-medium px-3 py-2 rounded-md">Materi Edukasi</a>
+                    <a href="#kuis" class="nav-link text-gray-600 hover:text-pink-500 font-medium px-3 py-2 rounded-md">Kuis Interaktif</a>
+                    <a href="#deteksi" class="nav-link text-gray-600 hover:text-pink-500 font-medium px-3 py-2 rounded-md">Deteksi Risiko</a>
+                </nav>
+                <button id="mobile-menu-button" class="md:hidden p-2 text-gray-600 hover:text-gray-800">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white">
+            <a href="#home" class="nav-link block text-gray-600 hover:bg-pink-50 px-4 py-2">Beranda</a>
+            <a href="#edukasi" class="nav-link block text-gray-600 hover:bg-pink-50 px-4 py-2">Materi Edukasi</a>
+            <a href="#kuis" class="nav-link block text-gray-600 hover:bg-pink-50 px-4 py-2">Kuis Interaktif</a>
+            <a href="#deteksi" class="nav-link block text-gray-600 hover:bg-pink-50 px-4 py-2">Deteksi Risiko</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 sm:p-6 lg:p-8">
+
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <div class="bg-white p-8 rounded-xl shadow-lg text-center">
+                <div class="flex justify-center mb-4">
+                    
+                </div>
+                <h1 class="text-3xl md:text-4xl font-bold text-pink-600 mb-4">Selamat Datang, Bunda Hebat!</h1>
+                <p class="text-gray-600 max-w-2xl mx-auto mb-6">Masa nifas adalah periode pemulihan yang penting setelah melahirkan. Kenali tanda-tanda bahaya untuk menjaga kesehatan Bunda dan si kecil. Aplikasi ini hadir untuk menemani perjalanan Bunda.</p>
+                <button class="nav-link-button bg-pink-500 text-white font-bold py-3 px-8 rounded-full hover:bg-pink-600 transition duration-300 shadow-lg transform hover:scale-105" data-target="edukasi">
+                    Mulai Belajar Sekarang
+                </button>
+            </div>
+        </section>
+
+        <!-- Edukasi Section -->
+        <section id="edukasi" class="section">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-2 text-gray-800">Mengenal Tanda Bahaya Masa Nifas</h2>
+            <p class="text-center text-gray-500 mb-8">Klik setiap kartu untuk melihat detail penanganan dan informasi penting.</p>
+            
+             <div class="bg-blue-100 border-l-4 border-blue-500 text-blue-700 p-4 rounded-md mb-8" role="alert">
+                <p class="font-bold">Ingat LICAKTI!</p>
+                <p><strong>Lihat</strong> kondisi, <strong>Catat</strong> gejala, <strong>Konsultasi</strong> ke nakes, dan <strong>Tindak</strong> lanjuti saran medis.</p>
+            </div>
+
+            <div id="edukasi-content" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Edukasi cards will be injected here by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Kuis Section -->
+        <section id="kuis" class="section">
+            <div class="max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-lg">
+                <div id="kuis-container">
+                    <h2 class="text-2xl font-bold text-center mb-6">Kuis Tanda Bahaya Nifas</h2>
+                    <div id="question-container" class="mb-4"></div>
+                    <div id="options-container" class="space-y-3"></div>
+                    <button id="next-question-btn" class="w-full mt-6 bg-pink-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-pink-600 transition duration-300">Selanjutnya</button>
+                </div>
+                <div id="kuis-result-container" class="hidden text-center">
+                    <h2 class="text-2xl font-bold mb-4">Hasil Kuis</h2>
+                    <p class="text-lg mb-4">Skor Anda: <span id="score" class="font-bold"></span></p>
+                    <div id="feedback-container" class="text-left space-y-4"></div>
+                    <button id="restart-kuis-btn" class="mt-6 bg-gray-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-gray-600 transition duration-300">Ulangi Kuis</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Deteksi Risiko Section -->
+        <section id="deteksi" class="section">
+            <div class="max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-lg">
+                <h2 class="text-2xl font-bold text-center mb-2">Deteksi Dini Tingkat Risiko</h2>
+                <p class="text-center text-gray-500 mb-6">Jawab pertanyaan berikut sesuai kondisi yang Bunda rasakan saat ini. Kejujuran Anda penting untuk hasil yang akurat.</p>
+                <form id="deteksi-form" class="space-y-6">
+                    <!-- Questions will be injected here by JavaScript -->
+                </form>
+                <button id="submit-deteksi-btn" class="w-full mt-8 bg-pink-500 text-white font-bold py-3 px-4 rounded-lg hover:bg-pink-600 transition duration-300 shadow-md">Lihat Hasil Deteksi</button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Modal for Edukasi Details -->
+    <div id="edukasi-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50 hidden">
+        <div class="bg-white rounded-lg shadow-xl max-w-lg w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h3 id="modal-title" class="text-2xl font-bold text-gray-800"></h3>
+                        <p id="modal-subtitle" class="text-sm text-gray-500 mt-1"></p>
+                    </div>
+                    <button id="close-modal-btn" class="text-gray-400 hover:text-gray-600">&times;</button>
+                </div>
+                <hr class="my-4">
+                <div id="modal-content" class="prose max-w-none text-gray-600"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Modal for Deteksi Result -->
+    <div id="deteksi-result-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50 hidden">
+        <div class="bg-white rounded-lg shadow-xl max-w-lg w-full text-center p-8">
+            <div id="result-icon" class="mx-auto mb-4"></div>
+            <h3 id="result-title" class="text-2xl font-bold"></h3>
+            <p id="result-message" class="text-gray-600 mt-2 mb-6"></p>
+            <button id="close-result-modal-btn" class="bg-pink-500 text-white font-bold py-2 px-6 rounded-lg hover:bg-pink-600 transition duration-300">Tutup</button>
+        </div>
+    </div>
+
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+
+        // --- Data Definitions ---
+
+        const edukasiData = [
+            {
+                id: 'perdarahan',
+                title: 'Perdarahan Hebat',
+                subtitle: 'Lebih dari haid normal',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-10 w-10 text-red-500"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3-3-3s-3-1-3-3a7 7 0 0 0-7 7c0 2 1 3 3 3s3 1 3 3z"></path></svg>`,
+                description: 'Perdarahan yang terjadi secara tiba-tiba dan banyak (mengganti lebih dari 1 pembalut dalam 1 jam) atau keluar gumpalan darah besar.',
+                penanganan: `
+                    <h4>Langkah Awal:</h4>
+                    <ul>
+                        <li>Segera baring dan istirahat.</li>
+                        <li>Pijat lembut bagian atas rahim (fundus) untuk merangsang kontraksi.</li>
+                        <li>Tetap tenang dan jangan panik.</li>
+                    </ul>
+                    <h4>Kapan Harus Waspada:</h4>
+                    <p>Jika perdarahan tidak berhenti atau semakin banyak, ini adalah kondisi darurat. <strong>SEGERA</strong> ke fasilitas kesehatan terdekat (puskesmas/rumah sakit).</p>
+                `
+            },
+            {
+                id: 'infeksi',
+                title: 'Cairan Vagina Berbau',
+                subtitle: 'Tanda infeksi nifas',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-10 w-10 text-yellow-500"><path d="M12 2a10 10 0 1 0 10 10c0-2.2-1.8-4-4-4"></path><path d="M22 2l-2.5 2.5"></path><path d="M20 7l-2.5-2.5"></path></svg>`,
+                description: 'Keluarnya cairan dari vagina (lokia) yang berbau busuk, berwarna kehijauan, atau disertai nyeri perut bawah.',
+                penanganan: `
+                    <h4>Langkah Awal:</h4>
+                    <ul>
+                        <li>Jaga kebersihan area kewanitaan dengan baik.</li>
+                        <li>Ganti pembalut secara teratur.</li>
+                        <li>Hindari penggunaan sabun atau produk pembersih kewanitaan yang mengandung parfum.</li>
+                    </ul>
+                    <h4>Kapan Harus Waspada:</h4>
+                    <p>Jika bau tidak hilang, disertai demam, atau nyeri perut, segera konsultasikan ke bidan atau dokter untuk pemeriksaan lebih lanjut.</p>
+                `
+            },
+            {
+                id: 'preeklampsia',
+                title: 'Sakit Kepala Hebat',
+                subtitle: 'Pandangan kabur & kejang',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-10 w-10 text-purple-500"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path><circle cx="12" cy="12" r="3"></circle></svg>`,
+                description: 'Sakit kepala parah yang tidak hilang dengan istirahat, pandangan menjadi kabur, nyeri ulu hati, atau bahkan sampai kejang.',
+                penanganan: `
+                    <h4>Langkah Awal:</h4>
+                    <ul>
+                        <li>Segera baringkan ibu di tempat yang aman dan miringkan posisinya untuk mencegah tersedak jika terjadi kejang.</li>
+                        <li>Jauhkan benda-benda berbahaya di sekitar.</li>
+                        <li>Jangan memasukkan apapun ke dalam mulut ibu.</li>
+                    </ul>
+                    <h4>Kapan Harus Waspada:</h4>
+                    <p>Ini adalah tanda preeklampsia/eklampsia pasca-salin. Kondisi ini <strong>SANGAT BERBAHAYA</strong>. Segera panggil bantuan medis atau bawa ke rumah sakit.</p>
+                `
+            },
+            {
+                id: 'demam',
+                title: 'Demam Tinggi',
+                subtitle: 'Suhu tubuh > 38°C',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-10 w-10 text-orange-500"><path d="M14 4v10.54a4 4 0 1 1-4 0V4a2 2 0 0 1 4 0Z"></path></svg>`,
+                description: 'Suhu tubuh di atas 38°C yang berlangsung lebih dari 24 jam, seringkali disertai menggigil dan badan terasa sakit.',
+                penanganan: `
+                    <h4>Langkah Awal:</h4>
+                    <ul>
+                        <li>Minum air putih yang banyak untuk mencegah dehidrasi.</li>
+                        <li>Istirahat yang cukup.</li>
+                        <li>Kompres dengan air hangat di dahi dan ketiak.</li>
+                        <li>Bisa mengonsumsi parasetamol sesuai anjuran.</li>
+                    </ul>
+                    <h4>Kapan Harus Waspada:</h4>
+                    <p>Jika demam tidak turun setelah 2 hari, atau disertai gejala infeksi lain (nyeri payudara, cairan berbau), segera hubungi tenaga kesehatan.</p>
+                `
+            },
+            {
+                id: 'payudara',
+                title: 'Payudara Bengkak & Nyeri',
+                subtitle: 'Merah, panas, dan sakit',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-10 w-10 text-pink-500"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"></path><path d="M12 12c-3 0-5 2.5-5 5"></path><path d="M12 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"></path></svg>`,
+                description: 'Payudara terasa sangat bengkak, keras, kemerahan, panas saat disentuh, dan sangat nyeri. Bisa jadi tanda bendungan ASI atau mastitis (infeksi payudara).',
+                penanganan: `
+                    <h4>Langkah Awal:</h4>
+                    <ul>
+                        <li>Susui bayi lebih sering atau pompa ASI untuk mengosongkan payudara.</li>
+                        <li>Kompres hangat sebelum menyusui untuk melancarkan aliran ASI.</li>
+                        <li>Kompres dingin setelah menyusui untuk mengurangi bengkak dan nyeri.</li>
+                        <li>Pijat lembut area yang bengkak saat menyusui.</li>
+                    </ul>
+                    <h4>Kapan Harus Waspada:</h4>
+                    <p>Jika disertai demam tinggi dan gejala tidak membaik dalam 24 jam, konsultasikan ke dokter atau konselor laktasi.</p>
+                `
+            },
+             {
+                id: 'babyblues',
+                title: 'Gangguan Mood Berat',
+                subtitle: 'Baby blues vs Depresi',
+                icon: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-10 w-10 text-blue-500"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><path d="M9 9h.01"></path><path d="M15 9h.01"></path></svg>`,
+                description: 'Perasaan sedih, cemas, atau marah yang berlebihan dan berlangsung lebih dari 2 minggu. Ibu mungkin kehilangan minat pada hal-hal yang disukai, sulit tidur, atau bahkan memiliki pikiran untuk menyakiti diri sendiri atau bayinya.',
+                penanganan: `
+                    <h4>Apa Bedanya dengan Baby Blues?</h4>
+                    <p><strong>Baby blues</strong> biasanya ringan, muncul di hari-hari pertama setelah melahirkan, dan membaik sendiri dalam 2 minggu. Gejalanya seperti mood swing, mudah menangis, dan cemas.</p>
+                    <p><strong>Depresi pasca-melahirkan</strong> lebih parah, berlangsung lama, dan mengganggu kemampuan ibu merawat diri dan bayinya. Ini adalah kondisi medis serius.</p>
+                    <h4>Langkah Awal:</h4>
+                    <ul>
+                        <li>Bicarakan perasaan Anda dengan pasangan, keluarga, atau teman yang dipercaya. Jangan memendamnya sendiri.</li>
+                        <li>Usahakan istirahat cukup, minta bantuan untuk merawat bayi agar bisa tidur.</li>
+                        <li>Konsumsi makanan bergizi dan sempatkan beraktivitas ringan di luar rumah.</li>
+                    </ul>
+                    <h4>Kapan Harus Waspada:</h4>
+                    <p>Jika perasaan sedih tidak kunjung membaik setelah 2 minggu, atau muncul pikiran menyakiti diri/bayi, <strong>SEGERA</strong> cari bantuan profesional (psikolog, psikiater, atau konsultasi ke puskesmas).</p>
+                `
+            }
+        ];
+        
+        const kuisData = [
+            {
+                question: "Seorang ibu nifas harus mengganti pembalut setiap 30 menit karena penuh. Tindakan ini termasuk normal.",
+                options: ["Benar", "Salah"],
+                answer: "Salah",
+                feedback: "Salah. Perdarahan yang mengharuskan ganti pembalut kurang dari 1 jam adalah tanda bahaya dan perlu penanganan segera."
+            },
+            {
+                question: "Manakah di bawah ini yang BUKAN merupakan tanda bahaya masa nifas?",
+                options: ["Demam tinggi > 38°C", "Cairan vagina berbau busuk", "Merasa sedikit lelah dan mengantuk", "Sakit kepala hebat disertai pandangan kabur"],
+                answer: "Merasa sedikit lelah dan mengantuk",
+                feedback: "Benar. Merasa lelah adalah hal yang wajar setelah melahirkan. Namun, gejala lainnya adalah tanda bahaya yang serius."
+            },
+            {
+                question: "Jika payudara bengkak dan nyeri, langkah pertama yang bisa dilakukan adalah:",
+                options: ["Berhenti menyusui bayi", "Mengompres dingin sebelum menyusui", "Menyusui bayi lebih sering", "Memakai bra yang sangat ketat"],
+                answer: "Menyusui bayi lebih sering",
+                feedback: "Benar. Menyusui atau memompa lebih sering membantu mengosongkan payudara dan mengurangi bendungan ASI."
+            },
+            {
+                question: "'Baby blues' yang tidak membaik setelah 2 minggu bisa menjadi tanda depresi pasca-melahirkan.",
+                options: ["Benar", "Salah"],
+                answer: "Benar",
+                feedback: "Benar. 'Baby blues' normalnya membaik dalam 2 minggu. Jika berlanjut, itu bisa menjadi tanda depresi dan memerlukan bantuan profesional."
+            }
+        ];
+
+        const deteksiQuestions = [
+            {
+                id: 'q1',
+                text: 'Bagaimana jumlah perdarahan nifas Anda dalam 24 jam terakhir?',
+                options: [
+                    { text: 'Sedikit / normal seperti haid biasa', value: 0 },
+                    { text: 'Lebih banyak dari haid, tapi tidak sampai penuh 1 pembalut per 2 jam', value: 2 },
+                    { text: 'Sangat banyak, penuh 1 pembalut dalam 1-2 jam atau keluar gumpalan darah', value: 5 }
+                ]
+            },
+            {
+                id: 'q2',
+                text: 'Apakah Anda mengalami demam (suhu di atas 38°C) atau menggigil?',
+                options: [
+                    { text: 'Tidak sama sekali', value: 0 },
+                    { text: 'Demam ringan (di bawah 38.5°C) dan membaik dengan obat', value: 2 },
+                    { text: 'Demam tinggi (>38.5°C) atau demam yang tidak turun', value: 5 }
+                ]
+            },
+            {
+                id: 'q3',
+                text: 'Apakah Anda merasakan sakit kepala, gangguan penglihatan, atau nyeri ulu hati?',
+                options: [
+                    { text: 'Tidak ada keluhan', value: 0 },
+                    { text: 'Sakit kepala ringan yang hilang dengan istirahat', value: 1 },
+                    { text: 'Sakit kepala hebat, pandangan kabur, atau nyeri ulu hati', value: 5 }
+                ]
+            },
+            {
+                id: 'q4',
+                text: 'Bagaimana kondisi payudara Anda?',
+                options: [
+                    { text: 'Normal, hanya terasa penuh sebelum menyusui', value: 0 },
+                    { text: 'Sedikit bengkak dan nyeri tapi membaik setelah disusui', value: 1 },
+                    { text: 'Sangat bengkak, merah, panas, dan nyeri hebat disertai demam', value: 4 }
+                ]
+            },
+            {
+                id: 'q5',
+                text: 'Bagaimana perasaan/mood Anda dalam beberapa hari terakhir?',
+                options: [
+                    { text: 'Merasa bahagia dan baik-baik saja', value: 0 },
+                    { text: 'Sering sedih, cemas, dan mudah menangis (berlangsung kurang dari 2 minggu)', value: 1 },
+                    { text: 'Perasaan sedih yang mendalam, tidak tertarik merawat bayi, atau ada pikiran menyakiti diri (berlangsung > 2 minggu)', value: 5 }
+                ]
+            }
+        ];
+
+        // --- Navigation ---
+        const sections = document.querySelectorAll('.section');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const navLinkButtons = document.querySelectorAll('.nav-link-button');
+
+        function navigateTo(targetId) {
+            sections.forEach(section => {
+                if (section.id === targetId) {
+                    section.classList.add('active');
+                } else {
+                    section.classList.remove('active');
+                }
+            });
+            window.scrollTo(0, 0);
+            document.getElementById('mobile-menu').classList.add('hidden');
+        }
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = e.target.getAttribute('href').substring(1);
+                navigateTo(targetId);
+            });
+        });
+
+        navLinkButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                const targetId = e.target.dataset.target;
+                navigateTo(targetId);
+            });
+        });
+        
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // --- Edukasi Section ---
+        const edukasiContent = document.getElementById('edukasi-content');
+        const modal = document.getElementById('edukasi-modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalSubtitle = document.getElementById('modal-subtitle');
+        const modalContent = document.getElementById('modal-content');
+        const closeModalBtn = document.getElementById('close-modal-btn');
+
+        function renderEdukasiCards() {
+            edukasiData.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer flex flex-col items-center text-center';
+                card.innerHTML = `
+                    <div class="mb-4">${item.icon}</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">${item.title}</h3>
+                    <p class="text-gray-500 mb-4">${item.subtitle}</p>
+                    <button class="mt-auto text-pink-500 font-semibold hover:underline">Baca Selengkapnya</button>
+                `;
+                card.addEventListener('click', () => openEdukasiModal(item));
+                edukasiContent.appendChild(card);
+            });
+        }
+
+        function openEdukasiModal(item) {
+            modalTitle.textContent = item.title;
+            modalSubtitle.textContent = item.description;
+            modalContent.innerHTML = item.penanganan;
+            modal.classList.remove('hidden');
+        }
+
+        closeModalBtn.addEventListener('click', () => modal.classList.add('hidden'));
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.add('hidden');
+            }
+        });
+
+        // --- Kuis Section ---
+        const kuisContainer = document.getElementById('kuis-container');
+        const questionContainer = document.getElementById('question-container');
+        const optionsContainer = document.getElementById('options-container');
+        const nextQuestionBtn = document.getElementById('next-question-btn');
+        const kuisResultContainer = document.getElementById('kuis-result-container');
+        const scoreEl = document.getElementById('score');
+        const feedbackContainer = document.getElementById('feedback-container');
+        const restartKuisBtn = document.getElementById('restart-kuis-btn');
+
+        let currentQuestionIndex = 0;
+        let score = 0;
+        let userAnswers = [];
+
+        function startKuis() {
+            currentQuestionIndex = 0;
+            score = 0;
+            userAnswers = [];
+            kuisContainer.style.display = 'block';
+            kuisResultContainer.classList.add('hidden');
+            showQuestion();
+        }
+
+        function showQuestion() {
+            const question = kuisData[currentQuestionIndex];
+            questionContainer.innerHTML = `<p class="text-lg font-medium">${currentQuestionIndex + 1}. ${question.question}</p>`;
+            optionsContainer.innerHTML = '';
+            question.options.forEach(option => {
+                const button = document.createElement('button');
+                button.textContent = option;
+                button.className = 'block w-full text-left p-3 border rounded-lg hover:bg-pink-50 transition-colors';
+                button.onclick = () => selectOption(button, option);
+                optionsContainer.appendChild(button);
+            });
+            nextQuestionBtn.disabled = true;
+            nextQuestionBtn.classList.add('opacity-50', 'cursor-not-allowed');
+            nextQuestionBtn.textContent = 'Selanjutnya';
+        }
+
+        function selectOption(button, selectedOption) {
+            // Reset styles
+            Array.from(optionsContainer.children).forEach(child => {
+                child.classList.remove('bg-pink-500', 'text-white', 'border-pink-500');
+                child.disabled = false;
+            });
+            // Apply style to selected
+            button.classList.add('bg-pink-500', 'text-white', 'border-pink-500');
+            // Store answer
+            userAnswers[currentQuestionIndex] = selectedOption;
+            // Enable next button
+            nextQuestionBtn.disabled = false;
+            nextQuestionBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+        }
+        
+        nextQuestionBtn.addEventListener('click', () => {
+            const question = kuisData[currentQuestionIndex];
+            if(userAnswers[currentQuestionIndex] === question.answer) {
+                score++;
+            }
+
+            currentQuestionIndex++;
+            if (currentQuestionIndex < kuisData.length) {
+                showQuestion();
+            } else {
+                showResults();
+            }
+        });
+        
+        function showResults() {
+            kuisContainer.style.display = 'none';
+            kuisResultContainer.classList.remove('hidden');
+            scoreEl.textContent = `${score} / ${kuisData.length}`;
+            feedbackContainer.innerHTML = '';
+            kuisData.forEach((q, index) => {
+                const isCorrect = userAnswers[index] === q.answer;
+                const feedbackDiv = document.createElement('div');
+                feedbackDiv.className = `p-3 rounded-lg border-l-4 ${isCorrect ? 'bg-green-50 border-green-500' : 'bg-red-50 border-red-500'}`;
+                feedbackDiv.innerHTML = `
+                    <p class="font-semibold">${index + 1}. ${q.question}</p>
+                    <p class="text-sm mt-1">Jawaban Anda: <span class="font-bold ${isCorrect ? 'text-green-700' : 'text-red-700'}">${userAnswers[index]}</span></p>
+                    <p class="text-sm mt-2 text-gray-600">${q.feedback}</p>
+                `;
+                feedbackContainer.appendChild(feedbackDiv);
+            });
+        }
+        
+        restartKuisBtn.addEventListener('click', startKuis);
+        
+        // --- Deteksi Section ---
+        const deteksiForm = document.getElementById('deteksi-form');
+        const submitDeteksiBtn = document.getElementById('submit-deteksi-btn');
+        const resultModal = document.getElementById('deteksi-result-modal');
+        const resultIcon = document.getElementById('result-icon');
+        const resultTitle = document.getElementById('result-title');
+        const resultMessage = document.getElementById('result-message');
+        const closeResultModalBtn = document.getElementById('close-result-modal-btn');
+        
+        function renderDeteksiQuestions() {
+            deteksiQuestions.forEach(q => {
+                const questionDiv = document.createElement('div');
+                questionDiv.className = 'border-t pt-4';
+                let optionsHtml = q.options.map(opt => `
+                    <label class="flex items-center p-3 rounded-lg hover:bg-gray-100 cursor-pointer">
+                        <input type="radio" name="${q.id}" value="${opt.value}" class="h-4 w-4 text-pink-600 focus:ring-pink-500 border-gray-300" required>
+                        <span class="ml-3 text-gray-700">${opt.text}</span>
+                    </label>
+                `).join('');
+                
+                questionDiv.innerHTML = `
+                    <p class="font-medium text-gray-800 mb-2">${q.text}</p>
+                    <div class="space-y-1">${optionsHtml}</div>
+                `;
+                deteksiForm.appendChild(questionDiv);
+            });
+        }
+
+        submitDeteksiBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const formData = new FormData(deteksiForm);
+            let totalScore = 0;
+            let formIsValid = true;
+            
+            for (let i = 0; i < deteksiQuestions.length; i++) {
+                if (!formData.has(deteksiQuestions[i].id)) {
+                    formIsValid = false;
+                    break;
+                }
+            }
+
+            if (!formIsValid) {
+                alert('Mohon jawab semua pertanyaan untuk melanjutkan.');
+                return;
+            }
+
+            for (const value of formData.values()) {
+                totalScore += parseInt(value, 10);
+            }
+            
+            showDeteksiResult(totalScore);
+        });
+
+        function showDeteksiResult(score) {
+            let result;
+            if (score <= 2) {
+                result = {
+                    title: 'Risiko Rendah',
+                    message: 'Kondisi Anda saat ini tampak baik. Tetap pantau kondisi, istirahat yang cukup, dan penuhi nutrisi. Jangan ragu menghubungi bidan jika ada keluhan.',
+                    icon: `<svg class="h-16 w-16 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>`,
+                    color: 'green'
+                };
+            } else if (score <= 5) {
+                result = {
+                    title: 'Risiko Sedang',
+                    message: 'Ada beberapa gejala yang perlu diwaspadai. Kami sangat menyarankan Anda untuk segera berkonsultasi dengan bidan atau dokter untuk pemeriksaan lebih lanjut.',
+                    icon: `<svg class="h-16 w-16 text-yellow-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>`,
+                    color: 'yellow'
+                };
+            } else {
+                result = {
+                    title: 'Risiko Tinggi',
+                    message: 'Gejala yang Anda alami menunjukkan kondisi yang berpotensi bahaya. Jangan tunda, segera pergi ke fasilitas kesehatan terdekat (Puskesmas/UGD Rumah Sakit) untuk mendapatkan pertolongan medis.',
+                    icon: `<svg class="h-16 w-16 text-red-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>`,
+                    color: 'red'
+                };
+            }
+            
+            resultIcon.innerHTML = result.icon;
+            resultTitle.textContent = result.title;
+            resultMessage.textContent = result.message;
+            
+            resultTitle.className = `text-2xl font-bold text-${result.color}-600`;
+            
+            resultModal.classList.remove('hidden');
+        }
+
+        closeResultModalBtn.addEventListener('click', () => resultModal.classList.add('hidden'));
+        resultModal.addEventListener('click', (e) => {
+            if(e.target === resultModal) {
+                 resultModal.classList.add('hidden');
+            }
+        });
+
+
+        // --- Initial Load ---
+        renderEdukasiCards();
+        startKuis();
+        renderDeteksiQuestions();
+        navigateTo('home');
+    });
+    </script>
+</body>
+</html>
+
